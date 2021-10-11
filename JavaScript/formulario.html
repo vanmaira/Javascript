@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button{
+            background-color: blueviolet;
+            color: cornsilk;
+            width: 100px;
+        }
+        input{
+            display: flex;
+            margin: 10px;
+            
+        }
+    </style>
+</head>
+<body>
+      
+    
+        <input type="text" id="nome" onblur="caixaAlta(this)" placeholder="Digite o nome" />
+        <input type="email" id="email" onblur="caixaBaixa(this)"  placeholder="Digite o email" />
+        <input type="password" id="senha" onblur="tamanhoSenha()" placeholder="Digite a senha" />
+        <br>
+        <span id="tamanho"></span>
+
+        <br>
+
+        <button onclick="loga()">Login</button>
+        <p id="logou"></p>
+        <p id="logou2"></p>
+
+
+
+<script>
+     caixaAlta = (e) => {
+                caixa = document.getElementById(e.id);
+                caixa.value = caixa.value.toUpperCase();
+            }
+
+            caixaBaixa = (e) => {
+                caixa = document.getElementById(e.id);
+                caixa.value = caixa.value.toLowerCase();
+            }
+
+            tamanhoSenha = () => {
+                senha = document.getElementById("senha").value;
+                if(senha.length < 6){
+                    document.getElementById('tamanho').innerHTML = `senha deve ter no minimo 6 caracteres`;
+                }}
+                loga = () => {
+                login = document.getElementById("email").value;
+                if(login.value = "e@e.com"){
+                    document.getElementById('logou').innerHTML = `E-mail correto`;
+                }else {document.getElementById('logou').innerHTML = `E-mail incorreto`;}}
+                
+
+            //email = "e@e.com" senha = 123123
+
+
+</script>
+   
+
+
+</body>
+</html>

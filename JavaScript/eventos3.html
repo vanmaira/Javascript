@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="nome" placeholder="Digite nome"/>
+    <input type="text" id="email" placeholder="Digite e-mail"/>
+    <button onclick="recebeDados()">Passa</button>
+    <p id="revela"></p>
+
+    <input type="text" id="valorA" placeholder="Digite o primeiro valor"/>
+    <input type="text" id="valorB" placeholder="Digite o primeiro valor"/>
+    <button onclick="recebeDados2()">Soma</button>
+    <p id="revela2"></p>
+
+    <a href="eventos3.html">Refresh</a>
+    
+    
+
+
+
+    
+
+    <script>
+    recebeDados= () =>{
+        n= document.getElementById("nome").value;
+        e= document.getElementById("email").value;
+
+        document.getElementById("revela").innerHTML  = `Nome: ${n}, Email: ${e}`;
+
+        
+    }
+
+    recebeDados2= () =>{
+        vA= parseInt(document.getElementById("valorA").value);
+        vB= parseInt(document.getElementById("valorB").value);
+        soma= vA+vB;
+
+        document.getElementById("revela2").innerHTML  = `Valor A: ${vA}, Valor B: ${vB}, Soma: ${soma}`;
+
+        
+    }
+
+
+    </script>
+</body>
+</html>

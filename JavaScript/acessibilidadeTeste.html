@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body, footer {
+            font-size: 10px;
+            background-image: linear-gradient(rgb(44, 210, 216), rgb(56, 197, 162), rgb(14, 145, 138));
+            height: 900px;    }
+
+        h1, label, p, button {
+            font-size: 2em;      }
+
+                
+        h1 {
+            text-align: center;    }
+        form{
+            align-content: left;    }
+        .tamanho{
+            background-color: cornflowerblue;
+            color: cornsilk;        }
+        p {
+            color: rgb(0, 0, 0);
+            text-shadow: 0.1em 0.1em 0.05em rgb(238, 231, 231)
+        }
+        footer{
+            height: 20px;
+            position: fixed;
+        }
+
+    </style>
+
+</head>
+<body>
+    <body>
+        <button class="tamanho" onclick="diminuir()"> A-</button>
+        <button class="tamanho" onclick="aumentar()">A+ </button>
+        <div>
+            <p> Quando um site não está acessível, milhões de usuários são impedidos de consumir informação, de realizar compras
+            e, até mesmo, de se comunicar com outras pessoas. Ou seja, é sinônimo de fechar portas em uma sociedade que se
+            orgulha em dizer que é globalizada e digitalmente conectada.
+    
+            Além de deixar de ganhar dinheiro, já que pessoas com deficiência também são consumidores ativos, a empresa
+            demonstra falta de empatia e de humanidade para com outros usuários.
+    
+            Vale lembrar, ainda, que um site acessível é mais bem ranqueado pelos algoritmos do Google, já que o buscador é
+            capaz de reconhecer esse tipo de prática, o que o torna mais relevante nas pesquisas.
+    
+            Tendo esse contexto em evidência, em 2016, foi imposta a
+            Tendo esse contexto em evidência, em 2016, foi imposta a Lei Brasileira de Inclusão, exigindo que todas as
+            páginas da web estejam acessíveis, sejam elas privadas, sejam elas públicas.
+    
+            Resumindo, acessibilidade na web não é apenas uma forma de cumprir com exigências legais, mas também é uma
+            maneira de garantir um diferencial competitivo para a sua empresa.</p>
+            <fieldset>
+                <form action="/pagina-processa-dados-do-form" method="post">
+                    <div >
+                        <label for="nome">Nome:</label>
+                        <input type="text" id="nome" onclick="verde1()" onmouseout="vermelho1()">
+                    </div>
+                    <br>
+                    <div>
+                        <label for="email">E-mail:</label>
+                        <input type="email" id="email" onclick="verde2()" onmouseout="vermelho2()">
+                    </div>
+                    <div>
+                        <br>
+                        <label for="msg">Mensagem:</label>
+                        <textarea id="msg" onclick="verde3()" onmouseout="vermelho3()"></textarea>
+                    </div>
+                    <br>
+                    <div onclick="enviar()" class="botao" >
+                        <button type="submit" id="botao">Enviar</button>
+                    </div>
+                </form>
+            </fieldset>           
+
+<script>
+        tamanho = 10;
+        function diminuir() {
+            tamanho --;
+            document.body.style.fontSize = tamanho +"px";
+        }
+        function aumentar() {
+            tamanho ++;
+            document.body.style.fontSize = tamanho +"px";
+        }
+        function verde1(){
+    document.getElementById("nome").style.backgroundColor= '#bbdb9b';
+ }
+
+function vermelho1(){
+    document.getElementById("nome").style.backgroundColor= '#ea6145';
+   
+ }
+ function verde2(){
+    document.getElementById("email").style.backgroundColor= '#bbdb9b';
+ }
+
+function vermelho2(){
+    document.getElementById("email").style.backgroundColor= '#ea6145';
+   
+ }
+ function verde3(){
+    document.getElementById("msg").style.backgroundColor= '#bbdb9b';
+ }
+
+function vermelho3(){
+    document.getElementById("msg").style.backgroundColor= '#ea6145';
+   
+ }
+</script>
+<footer>
+    <!--colocar em baixo do footer-->
+        </footer>
+        <div vw class="enabled">
+            <div vw-access-button class="active"></div>
+            <div vw-plugin-wrapper>
+              <div class="vw-plugin-top-wrapper"></div>
+            </div>
+          </div>
+          <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+          <script>
+            new window.VLibras.Widget('https://vlibras.gov.br/app');
+          </script>
+
+
+
+
+
+
+</body>
+</html>

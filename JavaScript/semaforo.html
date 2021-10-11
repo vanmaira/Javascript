@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .semaforo{
+            width: 300px;
+            height: 900px;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: center;
+            background-color: gray;
+        }
+        div{
+            width: 250px;
+            height: 250px;
+            margin: 10px;
+            background-color: #3E3E3E;
+            border-radius: 200px;
+        }
+        button{
+            background-color: black;
+            border: 0px;
+            padding: 30px;
+            color: azure;
+            border-radius: 40px;
+            margin: 10px;
+        }
+
+    </style>
+</head>
+<body onload="aciona()">
+    <div class="semaforo">
+        <div id="vermelho"></div>
+        <div id="amarelo"></div>
+        <div id="verde"></div>        
+    </div>
+    
+    <!-- <button onclick="aciona()">GO</button> -->
+    
+
+   <script text="text/script">
+
+   var controlador=0;
+   //setTimeout(função, valor em Milissegundos);
+  
+    aciona = () => {
+       
+    if(controlador==0){
+        document.getElementById("vermelho").style.backgroundColor= '#FF0000';
+        document.getElementById("amarelo").style.backgroundColor= '#3E3E3E';
+        document.getElementById("verde").style.backgroundColor= '#3E3E3E';
+        controlador=2;
+        setTimeout(aciona, 6000);
+    }else if (controlador==1){
+        document.getElementById("amarelo").style.backgroundColor= '#FFFF00';
+        document.getElementById("vermelho").style.backgroundColor= '#3E3E3E';
+        document.getElementById("verde").style.backgroundColor= '#3E3E3E';
+        controlador=0;
+        setTimeout(aciona, 2000);
+    }else if (controlador==2){
+        document.getElementById("verde").style.backgroundColor= '#008000';
+        document.getElementById("vermelho").style.backgroundColor= '#3E3E3E';
+        document.getElementById("amarelo").style.backgroundColor= '#3E3E3E';
+        controlador=1;
+        setTimeout(aciona, 6000);
+    }}
+
+
+
+
+   </script> 
+</body>
+</html>

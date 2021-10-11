@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form1</title>
+    <style>
+        input, textarea{
+            margin: 10px;
+            border-color: indigo;
+            width: 65%;
+        }
+        button{
+            background-color: blueviolet;
+            border-radius: 30%;
+            color: ghostwhite;
+            height: 30px;
+            width: 100px;  
+
+        }
+        label{
+            color: indigo;
+        }
+        fieldset{width: 70%;
+        }
+        textarea{
+            height: 100px;
+        }
+        
+
+    </style>
+</head>
+<body>
+
+    <fieldset>
+    <form action="/pagina-processa-dados-do-form" method="post">
+        <div >
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" onclick="verde1()" onmouseout="vermelho1()">
+        </div>
+        <br>
+        <div>
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" onclick="verde2()" onmouseout="vermelho2()">
+        </div>
+        <div>
+            <br>
+            <label for="msg">Mensagem:</label>
+            <textarea id="msg" onclick="verde3()" onmouseout="vermelho3()"></textarea>
+        </div>
+        <br>
+        <div onclick="surpresa()" class="botao" >
+            <button type="submit" id="botao">Enviar</button>
+        </div>
+    </form>
+</fieldset>
+    <script src="Form.js"> </script>
+</body>
+</html>
